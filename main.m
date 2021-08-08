@@ -39,7 +39,7 @@ c = length(unique(truelabel{1}));
 %% iter ...
 for rtimes = 1:runtimes
 % Multi-view clustering method on graph-based system
-[F, y, U, S0, evs, obj_value] = GBS(X, c, choice_graph, choice_metric, lambda); % c: the # of clusters
+[F, y, U, S0, evs, obj_value] = G_Cluster(X, c, choice_graph, choice_metric, lambda); % c: the # of clusters
 
 acc=valid_CA(y,y0);
 nmi=C_nmi(y0,y);
